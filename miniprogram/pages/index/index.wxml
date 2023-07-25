@@ -1,0 +1,45 @@
+<view wx:if="{{isShowExpand}}" style="padding-top:{{headerHeight}}px" class="modal">
+
+</view>
+
+
+<view>
+    <view class="top-header">
+        <view class="navbar" style="height:{{headerHeight}}px">
+            <view style="height:{{statusBarHeight}}px;width:100%">
+            </view>
+            <view class="navbar-left" style="margin-top:{{statusBarHeight}}px">
+                <view class="expand" bindtap="handleExpand">
+                    <image style="width:40rpx; height:40rpx;" src="/images/expand.png"/>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="content" style="padding-top:{{headerHeight}}px">
+    <view class="title">
+        那个女孩，世上最遥远的距离——《秒速五厘米》
+    </view>
+    <view class="horizontal-line">
+    </view>
+    <image class="img" src="https://www.liqingdan.com/storage/2020/03/2020032113534122.jpg"></image>
+    <view class="text">
+        夜晚的宁静被逐渐变大的雨声打破，我坐在窗前，看着窗外下着大雨，风儿带走一片树叶。这是秋天，不会有花瓣飘飞，有的只是落叶随风渐远的凄凉与无奈。在下班的路上，我在人生的十字路口碰到了一个女孩。这么说也许不太对。因为我注意到她身边有一位男士，还有他们依偎在一起时幸福的笑容。所以，
+        应该称呼她为“女士”才对，但是她在我的记忆之中，永远都会是那一个女孩。
+    </view>
+    <view class="text">
+        夜晚的宁静被逐渐变大的雨声打破，我坐在窗前，看着窗外下着大雨，风儿带走一片树叶。这是秋天，不会有花瓣飘飞，有的只是落叶随风渐远的凄凉与无奈。在下班的路上，我在人生的十字路口碰到了一个女孩。这么说也许不太对。因为我注意到她身边有一位男士，还有他们依偎在一起时幸福的笑容。所以，
+        应该称呼她为“女士”才对，但是她在我的记忆之中，永远都会是那一个女孩。
+    </view>
+    <view class="text">
+        夜晚的宁静被逐渐变大的雨声打破，我坐在窗前，看着窗外下着大雨，风儿带走一片树叶。这是秋天，不会有花瓣飘飞，有的只是落叶随风渐远的凄凉与无奈。在下班的路上，我在人生的十字路口碰到了一个女孩。这么说也许不太对。因为我注意到她身边有一位男士，还有他们依偎在一起时幸福的笑容。所以，
+        应该称呼她为“女士”才对，但是她在我的记忆之中，永远都会是那一个女孩。
+    </view>
+    <view class="text">
+        夜晚的宁静被逐渐变大的雨声打破，我坐在窗前，看着窗外下着大雨，风儿带走一片树叶。这是秋天，不会有花瓣飘飞，有的只是落叶随风渐远的凄凉与无奈。在下班的路上，我在人生的十字路口碰到了一个女孩。这么说也许不太对。因为我注意到她身边有一位男士，还有他们依偎在一起时幸福的笑容。所以，
+        应该称呼她为“女士”才对，但是她在我的记忆之中，永远都会是那一个女孩。
+    </view>
+</view>
+
+
