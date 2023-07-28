@@ -1,5 +1,38 @@
 page {
-    background-color: black;
+    background-color: #FBFAFE;
+}
+
+.modal {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 40%;
+    width: 100%;
+}
+
+.modal .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100rpx;
+    font-size: 32rpx;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.container {
+    margin-left: 32rpx;
+    margin-right: 32rpx;
 }
 
 .top-header {
@@ -17,21 +50,28 @@ page {
     align-items: center;
 }
 
+
 .tab-title {
     font-size: 56rpx;
 }
 
 .navbar {
-    background-color: black;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
 }
 
 .navbar .navbar-left {
     position: absolute;
     left: 32rpx;
+}
+
+.navbar-center {
+    font-size: 32rpx;
+    font-weight: bold;
 }
 
 .navbar-left .expand {
@@ -40,70 +80,46 @@ page {
     align-items: center;
 }
 
-
-.navbar-center {
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.container {
-    position: relative;
-    padding: 32rpx;
-    background-color: white;
-}
-
-
-.search-wrap {
+.container .wrap {
+    margin-top: 24rpx;
+    background-color: #fff;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 32rpx;
-    height: 80rpx;
-    width: 100%;
-    background-color: #e5e5e5;
+}
+
+.wrap .content {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    border-radius: 32rpx;
+    background-color: #FEFFFE;
+    margin-left: 32rpx;
+    margin-right: 32rpx;
 }
-
-.search-wrap .enter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content {
-    margin: 64rpx;
-    line-height: 1.6;
-    font-family: "Arial", sans-serif;
-}
-
-p {
-    margin-bottom: 1.2em;
-    text-indent: 2em; /* 段落首行缩进2个字符的宽度，可根据需要进行调整 */
-}
-
 
 .content .title {
-    font-size: 48rpx;
+    font-size: 32rpx; /* 使用rpx单位，以适应不同屏幕尺寸 */
     font-weight: bold;
-    margin-bottom: 16rpx;
-    color: white;
+    color: #333; /* 字体颜色为黑色 */
+    margin: 20rpx 0;
 }
 
-.content .img {
-    width: 100%;
-    height: 400rpx;
-    border-radius: 8rpx;
-}
-
-.content .text {
+.content .desc {
+    padding-top: 8rpx;
     font-size: 32rpx;
-    margin-top: 32rpx;
-    color: white;
-    text-indent: 2em; /* 段落首行缩进2个字符的宽度，可根据需要进行调整 */
+    color: #999;
+    margin-bottom: 20rpx;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-indent: 2em;
 }
 
-.horizontal-line {
+
+.img {
     width: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.4);
-    margin: 32rpx 0;
+    height: 300rpx;
+    border-radius: 24rpx;
 }
+

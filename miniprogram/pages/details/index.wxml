@@ -1,0 +1,43 @@
+<view class="top-header">
+    <view class="navbar" style="height:{{headerHeight}}px">
+        <view style="height:{{statusBarHeight}}px;width:100%">
+        </view>
+        <view class="navbar-left" style="margin-top:{{statusBarHeight}}px">
+            <view class="expand" bindtap="handleExpand" wx:if="{{isShowExpand}}">
+                <image style="width:40rpx; height:40rpx;" src="/images/book.png"/>
+            </view>
+
+            <view class="expand" bindtap="handleExpand" wx:if="{{!isShowExpand}}">
+                <image style="width:40rpx; height:40rpx;" src="/images/book_close.png"/>
+            </view>
+        </view>
+        <view class="navbar-center">
+            <view class="info">
+                <view>
+                    <image class="avatar" src="https://www.liqingdan.com/storage/2018/06/2018062511305636.jpg"></image>
+                </view>
+                <view class="nickname">
+                    阿盔
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="modal" style="margin-top:{{headerHeight}}px" wx:if="{{isShowExpand}}" catchtap="onModalClick">
+
+</view>
+
+
+<view class="content" style="padding-top:{{headerHeight}}px">
+    <view class="title">
+        霸道总裁就是软妹儿
+    </view>
+    <view class="horizontal-line">
+    </view>
+    <view class="text">
+        <wxparser rich-text="{{article.content}}"/>
+    </view>
+</view>
+
+

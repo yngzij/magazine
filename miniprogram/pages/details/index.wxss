@@ -1,0 +1,141 @@
+page {
+    background-color: #fff;
+    color: #000;
+}
+.modal {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 40%;
+    width: 100%;
+}
+
+.top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav-bottom {
+    margin-top: 16rpx;
+    height: 64rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tab-title {
+    font-size: 56rpx;
+}
+
+.navbar {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: rgba(0, 0, 0, 0.1) solid 1px;
+}
+
+.navbar .navbar-left {
+    position: absolute;
+    left: 32rpx;
+}
+
+.navbar-left .expand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navbar-center {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.navbar-center .info {
+    display: flex;
+    flex-direction: row;
+}
+
+.info .avatar {
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    margin-right: 16rpx;
+}
+
+.info .nickname {
+    font-size: 32rpx;
+    color: black;
+    padding-left: 8rpx;
+}
+
+.navbar-center .title {
+    font-size: 56rpx;
+    font-weight: bold;
+}
+
+.container {
+    position: relative;
+    padding: 32rpx;
+    background-color: white;
+}
+
+
+.search-wrap {
+    border-radius: 32rpx;
+    height: 80rpx;
+    width: 100%;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-wrap .enter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    margin: 64rpx;
+    line-height: 1.6;
+    font-family: "Arial", sans-serif;
+}
+
+
+.content .title {
+    font-size: 48rpx;
+    font-weight: bold;
+    margin-bottom: 16rpx;
+    color: black;
+}
+
+.content .img {
+    width: 100%;
+    height: 400rpx;
+    border-radius: 8rpx;
+}
+
+.content .text {
+    font-size: 32rpx;
+    margin-top: 32rpx;
+    color: black;
+    text-indent: 2em; /* 段落首行缩进2个字符的宽度，可根据需要进行调整 */
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 32rpx 0;
+}

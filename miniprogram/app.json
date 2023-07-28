@@ -11,7 +11,14 @@
     "pages/updateRecordResult/index",
     "pages/updateRecordSuccess/index",
     "pages/sumRecord/index",
-    "pages/sumRecordResult/index"
+    "pages/sumRecordResult/index",
+    "pages/details/index"
   ],
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "wxparserPlugin": {
+      "version": "0.1.0",
+      "provider": "wx9d4d4ffa781ff3ac"
+    }
+  }
 }
