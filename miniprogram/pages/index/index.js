@@ -8,6 +8,28 @@ Page({
         selected: 0,
         headerHeight: 0,
         statusHeight: 0,
+        page: 1,
+        pageSize: 10,
+        categoryList: [
+            {
+                id: 1,
+                title: '浮人故事汇',
+            },
+            {
+                id: 1,
+                title: '浮人故事汇2',
+            },
+            {
+                id: 1,
+                title: '浮人故事汇3',
+            },
+            {
+                id: 1,
+                title: '浮人故事汇4',
+            }
+        ],
+
+
         articleList: [{
             id: 1,
             title: '那个女孩，世上最遥远的距离——《秒速五厘米》',
@@ -30,6 +52,22 @@ Page({
             }
         ],
     },
+    // 点击切换
+    selectedCategory(e) {
+        const index = e.currentTarget.dataset.id;
+        console.log(index)
+        this.setData({
+            selected: index
+        })
+    },
+
+    getData(id = 1) {
+
+    },
+    loadMore() {
+
+    },
+
     //下拉刷新
     onPullDownRefresh() {
         wx.showNavigationBarLoading();

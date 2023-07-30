@@ -18,7 +18,7 @@ Page({
       title: '',
     });
     wx.cloud.callFunction({
-      name: 'quickstartFunctions',
+      title: 'quickstartFunctions',
       config: {
         env: this.data.envId
       },

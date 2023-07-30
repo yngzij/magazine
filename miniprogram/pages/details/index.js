@@ -6,7 +6,7 @@ Page({
     data: {
         isShowExpand: false,
         selected: 0,
-
+        statusBarHeight: 0,
         headerHeight: 0,
         statusHeight: 0,
         showUploadTip: false,
