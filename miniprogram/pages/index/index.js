@@ -59,6 +59,7 @@ Page({
         this.setData({
             selected: index
         })
+        this.getData(index)
     },
 
     getData(id = 1) {
@@ -108,6 +109,16 @@ Page({
         this.setData({
             headerHeight: statusBarHeight + 44,
             statusBarHeight: statusBarHeight,
+        })
+
+        const db = wx.cloud.database()
+        db.collection('tags').get({
+            success: res => {
+                console.log(res.data)
+            },
+            fail: err => {
+                console.log(err)
+            }
         })
     }
 });

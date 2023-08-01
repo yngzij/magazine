@@ -25,16 +25,9 @@
 </view>
 
 <view class="modal" style="margin-top:{{headerHeight}}px" wx:if="{{isShowExpand}}" catchtap="onModalClick">
-
 </view>
 
-
 <view class="content" style="padding-top:{{headerHeight}}px">
-    <view class="title">
-        霸道总裁就是软妹儿
-    </view>
-    <view class="horizontal-line">
-    </view>
     <view class="text">
         <wxparser rich-text="{{article.content}}"/>
     </view>
