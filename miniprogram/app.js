@@ -17,8 +17,31 @@ App({
         const systemInfo = wx.getSystemInfoSync()
         const statusBarHeight = systemInfo.statusBarHeight;
 
-        this.globalData = {
+        const db = wx.cloud.database()
+
+        let topics = []
+        let tags = []
+
+
+        db.collection('topics').get({
+            success: res => {
+                this.globalData.topics = res.data
+            },
+            fail: err => {
+                console.log(err)
+            }
+        })
+
+        db.collection("tags").get({
+            success: res => {
+                this.globalData.tags = res.data
+            }
+        })
+
+        this.globalData.statusBarHeight = statusBarHeight
+        
+        /*this.globalData = {
             statusBarHeight: statusBarHeight,
-        };
+        };*/
     }
 });

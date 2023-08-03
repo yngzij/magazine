@@ -2,6 +2,7 @@
 // const app = getApp()
 const {envList} = require('../../envList.js');
 
+
 Page({
     data: {
         isShowExpand: false,
@@ -10,27 +11,8 @@ Page({
         statusHeight: 0,
         page: 1,
         pageSize: 10,
-        categoryList: [
-            {
-                id: 1,
-                title: '浮人故事汇',
-            },
-            {
-                id: 1,
-                title: '浮人故事汇2',
-            },
-            {
-                id: 1,
-                title: '浮人故事汇3',
-            },
-            {
-                id: 1,
-                title: '浮人故事汇4',
-            }
-        ],
-
-
-        articleList: [{
+        tags: [],
+        topics: [{
             id: 1,
             title: '那个女孩，世上最遥远的距离——《秒速五厘米》',
             desc: '夜晚的宁静被逐渐变大的雨声打破，我坐在窗前，看着窗外下着大雨，风儿带走一片树叶。这是秋天，不会有花瓣飘飞，有的只是落叶随风渐远的凄凉与无奈。在下班的路上，我在人生的十字路口碰到了一个女孩。这么说也许不太对。因为我注意到她身边有一位男士，还有他们依偎在一起时幸福的笑容。所以，\n' +
@@ -80,7 +62,6 @@ Page({
 
     // 打开导航
     handleExpand(e) {
-
         this.setData({
             isShowExpand: !this.data.isShowExpand
         })
@@ -106,19 +87,13 @@ Page({
 
     onLoad() {
         const statusBarHeight = getApp().globalData.statusBarHeight;
+        const topics = getApp().globalData.topics;
+        const tags = getApp().globalData.tags;
         this.setData({
             headerHeight: statusBarHeight + 44,
             statusBarHeight: statusBarHeight,
-        })
-
-        const db = wx.cloud.database()
-        db.collection('tags').get({
-            success: res => {
-                console.log(res.data)
-            },
-            fail: err => {
-                console.log(err)
-            }
+            tags: tags,
+            topics: topics
         })
     }
 });
