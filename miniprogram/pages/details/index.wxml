@@ -14,10 +14,10 @@
         <view class="navbar-center">
             <view class="info">
                 <view>
-                    <image class="avatar" src="https://www.liqingdan.com/storage/2018/06/2018062511305636.jpg"></image>
+                    <image class="avatar" src="{{topic.avatar}}"></image>
                 </view>
                 <view class="nickname">
-                    阿盔
+                    {{topic.author}}
                 </view>
             </view>
         </view>
@@ -29,7 +29,7 @@
 
 <view class="content" style="padding-top:{{headerHeight}}px">
     <view class="text">
-        <wxparser rich-text="{{article.content}}"/>
+        <wxparser rich-text="{{topic.content}}"/>
     </view>
 </view>
 

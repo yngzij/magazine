@@ -22,7 +22,7 @@
     <view class="modal" style="margin-top:{{headerHeight}}px" wx:if="{{isShowExpand}}" catchtap="onModalClick">
         <view class="content">
             <view wx:for="{{tags}}" class="item" wx:key="id">
-                <view bindtap="selectedCategory" data-id="{{item.id}}">
+                <view bindtap="selectedCategory" data-id="{{item._id}}">
                     {{item.title}}
                 </view>
             </view>
@@ -32,7 +32,7 @@
     <view style="padding-top:{{headerHeight}}px">
         <view class="container">
             <view wx:for="{{topics}}" wx:key="id">
-                <view class="wrap" data-id="{{item.id}}" bindtap="goToDetailPage">
+                <view class="wrap" data-id="{{item._id}}" bindtap="goToDetailPage">
                     <view class="content">
                         <view class="title">
                             {{item.title}}
