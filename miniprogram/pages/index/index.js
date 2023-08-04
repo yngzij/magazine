@@ -16,9 +16,23 @@ Page({
     selectedCategory(e) {
         const tagId = e.currentTarget.dataset.id;
         const db = wx.cloud.database();
-        const $ = db.command.aggregate
 
-        db.collection('topics').aggregate()
+        db.collection('topics').where({
+            tags: tagId
+        }).get({
+            success: res => {
+                console.log(res.data)
+                this.setData({
+                    topics: res.data
+                })
+                wx.setNavigationBarTitle({
+                    title: this.tags[tagId]
+                })
+            },
+            fail(err) {
+                console.log(err)
+            }
+        })
 
     },
 
