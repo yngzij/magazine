@@ -15,8 +15,10 @@ page {
 }
 
 .modal .content {
-    overflow-y: scroll;
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8rpx;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
 }
@@ -30,7 +32,7 @@ page {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 16rpx;
+    margin: 8rpx;
 }
 
 .container {

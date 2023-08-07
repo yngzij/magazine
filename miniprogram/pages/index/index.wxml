@@ -19,7 +19,7 @@
         </view>
     </view>
 
-    <view class="modal" style="margin-top:{{headerHeight}}px" wx:if="{{isShowExpand}}" catchtap="onModalClick">
+    <view class="modal" style="margin-top:{{headerHeight}}px" wx:if="{{showExpand}}" catchtap="onModalClick">
         <view class="content">
             <view wx:for="{{tags}}" class="item" wx:key="id">
                 <view bindtap="selectedCategory" data-id="{{item._id}}">

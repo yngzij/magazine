@@ -2,7 +2,7 @@
     <view class="navbar" style="height:{{headerHeight}}px">
         <view style="height:{{statusBarHeight}}px;width:100%">
         </view>
-        <view class="navbar-left" style="margin-top:{{statusBarHeight}}px">
+        <!--<view class="navbar-left" style="margin-top:{{statusBarHeight}}px">
             <view class="expand" bindtap="handleExpand" wx:if="{{isShowExpand}}">
                 <image style="width:40rpx; height:40rpx;" src="/images/book.png"/>
             </view>
@@ -10,7 +10,7 @@
             <view class="expand" bindtap="handleExpand" wx:if="{{!isShowExpand}}">
                 <image style="width:40rpx; height:40rpx;" src="/images/book_close.png"/>
             </view>
-        </view>
+        </view>-->
         <view class="navbar-center">
             <view class="info">
                 <view>

@@ -3,7 +3,7 @@ const {envList} = require('../../envList.js');
 
 Page({
     data: {
-        isShowExpand: false,
+        showExpand: false,
         selected: 0,
         headerHeight: 0,
         statusHeight: 0,
@@ -23,24 +23,22 @@ Page({
             success: res => {
                 console.log(res.data)
                 this.setData({
-                    topics: res.data
+                    topics: res.data,
+                    showExpand: !this.data.showExpand
                 })
                 wx.setNavigationBarTitle({
-                    title: this.tags[tagId]
+                    title: this.tags[tagId],
                 })
             },
             fail(err) {
                 console.log(err)
             }
         })
-
     },
 
     getData(id = 1) {
-
     },
     loadMore() {
-
     },
 
     //下拉刷新
@@ -55,13 +53,12 @@ Page({
     // 打开导航
     handleExpand(e) {
         this.setData({
-            isShowExpand: !this.data.isShowExpand
+            showExpand: !this.data.showExpand
         })
     },
     onModalClick(e) {
         //点击事件不传递到父元素
         return false
-
     },
     onScroll: function (event) {
         if (this.data.isShowExpand) {
@@ -71,16 +68,19 @@ Page({
     },
 
     goToDetailPage(e) {
-
         const itemId = e.currentTarget.dataset.id; // 获取点击的列表项的ID
         console.log(itemId)
         wx.navigateTo({
-            url: '/pages/details/index?id=' + itemId, // 跳转到详情页面，并传递ID参数
+            url: '/pages/details/index?id=' + itemId + '&categoryId' + this.data.selected,
         });
     },
 
     onLoad() {
         const statusBarHeight = getApp().globalData.statusBarHeight;
+        this.setData({
+            statusBarHeight: statusBarHeight
+        })
+
         const db = wx.cloud.database();
 
         let topicsPromise = new Promise((resolve, reject) => {
@@ -111,7 +111,6 @@ Page({
                     topics: topicsData,
                     tags: tagsData,
                     headerHeight: statusBarHeight + 44,
-                    statusHeight: statusBarHeight
                 });
             })
             .catch(err => {
